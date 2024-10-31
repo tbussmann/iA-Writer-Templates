@@ -130,6 +130,8 @@
     height: 50px;
     margin-bottom: -50px;  
   }
+  /* unfortunately this doesn't help against breaks between directly adjacent descending headlines
+     and the + selector (h1+h2) matches the second so we cannot easily enlarge the box */
   /* github-markdown.css does define bottom padding and border for h1 / h2 which conflicts with this hack 
      remove these and define them top of the workaround instead */
   html.night-mode .markdown-body h1, html:not(.night-mode) .markdown-body h1,
