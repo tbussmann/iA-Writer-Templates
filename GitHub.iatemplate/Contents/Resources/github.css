@@ -103,15 +103,15 @@
   }
   /* github-markdown.css does define bottom padding and border for h1 / h2 which conflicts with this hack 
      remove these and define them top of the workaround instead */
-  .markdown-body h1,
-  .markdown-body h2 {
+  html.night-mode .markdown-body h1, html:not(.night-mode) .markdown-body h1,
+  html.night-mode .markdown-body h2, html:not(.night-mode) .markdown-body h2 {
     padding-bottom: unset;
     border-bottom: unset;
   }
-  .markdown-body h1::after,
-  .markdown-body h2::after {
+  html.night-mode .markdown-body h1::after, html:not(.night-mode) .markdown-body h1::after,
+  html.night-mode .markdown-body h2::after, html:not(.night-mode) .markdown-body h2::after {
     margin-top: 0.3em;
-    border-top: 1px solid #eaecef;
+    border-top: 1px solid hsla(210,18%,87%,1);
   }
 }  
 
@@ -134,4 +134,9 @@
 
 .markdown-body figcaption {
 	margin-bottom: 16px; /* same as between paragraphs */
+}
+
+  
+.markdown-body .footnotes > hr {
+  display: none;
 }
