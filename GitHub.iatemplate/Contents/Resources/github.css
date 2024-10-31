@@ -80,6 +80,32 @@
     white-space: pre-wrap;
   }
 
+  /* repeat header on each page and don't split rows*/
+  .markdown-body thead { /* not working in WebKit: https://bugs.webkit.org/show_bug.cgi?id=17205 */
+    display: table-header-group;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+  .markdown-body th { /* not working - dunno */
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+  .markdown-body tr,
+  .markdown-body td { /* not working - dunno */
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+  
+  /* workaround by inserting a block element in td/th */
+  .markdown-body th nobreakcell,
+  .markdown-body td nobreakcell { 
+    display: block;
+    page-break-inside: avoid;
+    page-break-before: auto;
+    page-break-after: auto;
+  }
+
   /* void page breaks after headlines */
   .markdown-body h1,
   .markdown-body h2,
