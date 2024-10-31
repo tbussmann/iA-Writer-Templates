@@ -7,9 +7,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleIdentifier</key>
-	<string>net.ia.writer.template.github</string>
+	<string>net.ia.writer.template.github_mod</string>
 	<key>CFBundleName</key>
-	<string>GitHub</string>
+	<string>GitHub_mod</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.1</string>
 	<key>CFBundleVersion</key>
