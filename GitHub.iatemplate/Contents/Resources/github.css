@@ -11,6 +11,8 @@
   --horizontal-padding: 0;
   padding-left: var(--horizontal-padding);
   padding-right: var(--horizontal-padding);
+  
+  font-size: 90%; /* show everything a bit smaller */ 
 }
 
 @supports (padding: constant(safe-area-inset-left)) and (padding: constant(safe-area-inset-right)) {
@@ -68,6 +70,7 @@
 @media print {
   .markdown-body {
     --horizontal-padding: 75px;
+    font-size: 70%; /* decrease font size in print */ 
   }
   .markdown-body p {
     widows: 2;      /* avoid single lines at... */
