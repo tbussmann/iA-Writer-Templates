@@ -6,7 +6,8 @@
   <meta name="viewport" content="initial-scale=1, viewport-fit=cover">
   <script type="module">
     //mermaid 11 gives an SyntaxError: Unexpected token '{' in iA Writer 7.2.6 on macOS 12.7.6 with Safari 17.6
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/+esm';
+    //as of 2026-06-11: 10.9.6 (latest @10 has an component wich is 404 on jsdelivr, so pin to 10.9.5)
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10.9.5/+esm';
 
     var refresh_mm = function () {
 		mermaid.run();
